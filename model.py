@@ -13,16 +13,15 @@ class SimpleNeuralNetwork(object):
         self.activations = [np.zeros(layers[i]) for i in range(len(layers))]
         self.derivatives = [np.zeros((layers[i], layers[i + 1])) for i in range(len(layers) - 1)]
         
-        match activation :
-            case 'Tanh':
-                self._activation_function = self._tanh
-                self._activation_function_derivative = self._tanh_derivative
-            case 'Sigmoid':
-                self._activation_function = self._sigmoid
-                self._activation_function_derivative = self._sigmoid_derivative
-            case _:
-                self._activation_function = self._tanh
-                self._activation_function_derivative = self._tanh_derivative
+        if activation == 'Tanh':
+            self._activation_function = self._tanh
+            self._activation_function_derivative = self._tanh_derivative
+        elif activation == 'Sigmoid':
+            self._activation_function = self._sigmoid
+            self._activation_function_derivative = self._sigmoid_derivative
+        else:
+            self._activation_function = self._tanh
+            self._activation_function_derivative = self._tanh_derivative
 
     def forward_propagate(self, inputs):
         InitialInput = inputs
