@@ -69,25 +69,26 @@ if st.session_state.model_configuration['is_visible']:
     
     with st.container():
         st.header('Model Validation')
-        
-        prediction = st.session_state.model.predict(test_x)
-        prediction_data = [[x, y] for x, y in zip(test_x, prediction)]
-        d3_graph(data=prediction_data, referenceFunction=reference_data, key=1)
-        
+        st.divider()
         _batch_size = st.session_state.model_configuration['batch_size']
         col1, col2, col3, col4 = st.columns(4)
         with col2:
+            #Implementation of buttons using returned boolean values to avoid on click event handlers from being called at wrong time b/c streamlit
             if st.button('Train 10 epochs'):
                 st.session_state.model.train(data=[test_x], target_label=[target_y], batch_size = _batch_size, epochs=10, shuffle= True, learning_rate=0.05)
     
         with col3:
             if st.button('Train 100 epochs'):
                 st.session_state.model.train(data=[test_x], target_label=[target_y], batch_size = _batch_size, epochs=100, shuffle= True, learning_rate=0.05)
-                
+            
+        prediction = st.session_state.model.predict(test_x)
+        prediction_data = [[x, y] for x, y in zip(test_x, prediction)]
+        d3_graph(data=prediction_data, referenceFunction=reference_data, key=2)
+        
         with st.expander("View Predicted Values"):
             data_frame = pd.DataFrame(prediction_data, columns=['x', 'y'])
             st.dataframe(data_frame, use_container_width=True)
-            
+        
         st.divider()
     
 
