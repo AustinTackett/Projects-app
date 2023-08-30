@@ -6,7 +6,7 @@ from typing import List
 from typing import Tuple
 import sklearn
 
-from models.model import SimpleNeuralNetwork
+from model import SimpleNeuralNetwork
 from my_component import d3_graph
 
 '''# Neural Network Regression Through Gradient Descent Visualization'''
