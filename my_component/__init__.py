@@ -3,10 +3,10 @@ from typing import List
 from typing import Tuple
 import os
 
-'''#Tell streamlit to look at port 3001 to find react component in pipeline
+#Tell streamlit to look at port 3001 to find react component in pipeline
 _my_component_func = components.declare_component(
     "d3_graph",
-    url="http://localhost:3001/")'''
+    url="http://localhost:3001/")
 
 parent_dir = os.path.dirname(os.path.abspath(__file__))
 build_dir = os.path.join(parent_dir, "frontend/build")
