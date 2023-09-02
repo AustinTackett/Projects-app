@@ -2,3 +2,4 @@ node_modules
 data_generation.py
 __pycache__/
 *.py[cod]
+other

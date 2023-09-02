@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 from models.simpleRegression import SimpleNeuralNetwork
-from d3GraphComponenet import d3_graph
+from reactComponents.d3LineGraph import d3_graph
 
 st.set_page_config(page_title="NN Regression", page_icon="📈")
 
