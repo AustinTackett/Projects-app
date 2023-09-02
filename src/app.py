@@ -6,8 +6,8 @@ from typing import List
 from typing import Tuple
 import sklearn
 
-from model import SimpleNeuralNetwork
-from my_component import d3_graph
+from models.simpleRegression import SimpleNeuralNetwork
+from d3GraphComponenet import d3_graph
 
 '''# Neural Network Regression Through Gradient Descent Visualization'''
 st.divider()
