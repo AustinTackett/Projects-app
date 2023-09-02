@@ -2,12 +2,11 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np 
 import pandas as pd
-from typing import List
-from typing import Tuple
-import sklearn
 
 from models.simpleRegression import SimpleNeuralNetwork
 from d3GraphComponenet import d3_graph
+
+st.set_page_config(page_title="NN Regression", page_icon="📈")
 
 '''# Neural Network Regression Through Gradient Descent Visualization'''
 st.divider()
