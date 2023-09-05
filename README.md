@@ -1,2 +1,5 @@
 A Simple App built to visualize inputs fitting to a sin wave.
-https://austintackett.streamlit.app/
+
+
+(cd streamlit_app)
+(streamlit run streamlit_app.py)
