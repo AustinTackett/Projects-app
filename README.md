@@ -1,1 +1,1 @@
-This is a home for my projects for fun
+Some projects

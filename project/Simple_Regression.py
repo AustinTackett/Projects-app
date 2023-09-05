@@ -3,8 +3,12 @@ import matplotlib.pyplot as plt
 import numpy as np 
 import pandas as pd
 
-from models.simpleRegression import SimpleNeuralNetwork
-from reactComponents.d3LineGraph import d3_graph
+from models.SimpleNeuralNetwork import SimpleNeuralNetwork
+#d3 graph from local node server 
+#from reactComponents.d3LineGraph.d3LineGraphSrc import d3_graph
+
+#Named the package wrong and I do not want to deal with reuploading to PyPi to remove 'Src'
+from d3LineGraphSrc import d3_graph
 
 st.set_page_config(page_title="NN Regression", page_icon="📈")
 
@@ -102,7 +106,6 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-
 
 
 
