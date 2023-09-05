@@ -1,1 +1,1 @@
-Some projects
+A Simple App built to visualize inputs fitting to a sin wave.
